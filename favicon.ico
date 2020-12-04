@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://dotinstall.com/lessons/basic_html_v5/49801 -->
+<html lang="ja" class="style-version-2 theater-mode" id="page_id_lesson_show"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style id="ace_editor.css">.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;box-sizing: border-box;min-width: 100%;contain: style size layout;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;contain: style size layout;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {position: absolute;top: 0;left: 0;right: 0;padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {contain: strict;position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;contain: strict;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: transparent;color: inherit;z-index: 1000;opacity: 1;}.ace_composition_placeholder { color: transparent }.ace_composition_marker { border-bottom: 1px solid;position: absolute;border-radius: 0;margin-top: 1px;}[ace_nocontext=true] {transform: none!important;filter: none!important;perspective: none!important;clip-path: none!important;mask : none!important;contain: none!important;perspective: none!important;mix-blend-mode: initial!important;z-index: auto;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;height: 1000000px;contain: style size layout;}.ace_text-layer {font: inherit !important;position: absolute;height: 1000000px;width: 1000000px;contain: style size layout;}.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {contain: style size layout;position: absolute;top: 0;left: 0;right: 0;}.ace_hidpi .ace_text-layer,.ace_hidpi .ace_gutter-layer,.ace_hidpi .ace_content,.ace_hidpi .ace_gutter {contain: strict;will-change: transform;}.ace_hidpi .ace_text-layer > .ace_line, .ace_hidpi .ace_text-layer > .ace_line_group {contain: strict;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {opacity: 0;}.ace_smooth-blinking .ace_cursor {transition: opacity 0.18s;}.ace_animate-blinking .ace_cursor {animation-duration: 1000ms;animation-timing-function: step-end;animation-name: blink-ace-animate;animation-iteration-count: infinite;}.ace_animate-blinking.ace_smooth-blinking .ace_cursor {animation-duration: 1000ms;animation-timing-function: ease-in-out;animation-name: blink-ace-animate-smooth;}@keyframes blink-ace-animate {from, to { opacity: 1; }60% { opacity: 0; }}@keyframes blink-ace-animate-smooth {from, to { opacity: 1; }45% { opacity: 1; }60% { opacity: 0; }85% { opacity: 0; }}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;box-sizing: border-box;}.ace_line .ace_fold {box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_inline_button {border: 1px solid lightgray;display: inline-block;margin: -1px 8px;padding: 0 5px;pointer-events: auto;cursor: pointer;}.ace_inline_button:hover {border-color: gray;background: rgba(200,200,200,0.2);display: inline-block;pointer-events: auto;}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_mobile-menu {position: absolute;line-height: 1.5;border-radius: 4px;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;background: white;box-shadow: 1px 3px 2px grey;border: 1px solid #dcdcdc;color: black;}.ace_dark > .ace_mobile-menu {background: #333;color: #ccc;box-shadow: 1px 3px 2px grey;border: 1px solid #444;}.ace_mobile-button {padding: 2px;cursor: pointer;overflow: hidden;}.ace_mobile-button:hover {background-color: #eee;opacity:1;}.ace_mobile-button:active {background-color: #ddd;}.ace_placeholder {font-family: arial;transform: scale(0.9);opacity: 0.7;transform-origin: left;text-indent: 10px;}
+/*# sourceURL=ace/css/ace_editor.css */</style>
+
+<title>#01 プロフィールサイトを作ってみよう | はじめてのHTML - プログラミングならドットインストール</title>
+<meta name="description" content="はじめてのHTMLの#1回: 完成版や必要なツールについて確認したのちに、画像素材について説明していきます。">
+<meta name="author" content="dotinstall">
+<meta name="copyright" content="Copyright (C) dotinstall.com">
+
+
+<!--
+
+[エンジニア、プログラマのあるある話]
+
+"iptablesの設定法法を覚えられる気がしない"
+
+投稿は Twitter / @dotinstall までお寄せください。
+
+-->
+
+<link rel="canonical" href="https://dotinstall.com/lessons/basic_html_v5/49801">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dotinstall.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dotinstall.com/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://dotinstall.com/apple_touch_icon_180x180.png">
+<link rel="index" href="https://dotinstall.com/">
+<link rel="stylesheet" href="./favicon_files/cf.css">
+
+<link rel="alternate" type="application/rss+xml" title="新着レッスンRSS" href="https://dotinstall.com/lessons.rss">
+<link rel="alternate" type="application/rss+xml" title="新着補足情報RSS" href="https://dotinstall.com/lessons/knowledge.rss">
+<script type="text/javascript" async="" src="./favicon_files/usergram.js.ダウンロード"></script><script type="text/javascript" async="" src="./favicon_files/bi.js.ダウンロード"></script><script async="" src="./favicon_files/analytics.js.ダウンロード"></script><script src="./favicon_files/jquery-1.10.2.min.js.ダウンロード"></script>
+
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="./favicon_files/jquery.circliful.css">
+<link rel="stylesheet" href="./favicon_files/bootstrap_328.css">
+<link rel="stylesheet" href="./favicon_files/font-awesome.min.css">
+<link rel="stylesheet" href="./favicon_files/dotinstall-icons.css">
+<link href="./favicon_files/github-gist.css" rel="stylesheet">
+
+
+<link href="./favicon_files/video-js.min.css" rel="stylesheet">
+<link href="./favicon_files/videojs-change-speed.css" rel="stylesheet">
+<link href="./favicon_files/videojs-quality-selector.css" rel="stylesheet">
+<link href="./favicon_files/videojs-card.css" rel="stylesheet">
+<link href="./favicon_files/videojs-voice-selector-sample.css" rel="stylesheet">
+<link href="./favicon_files/videojs-dotinstall-custom.css" rel="stylesheet">
+
+<link rel="stylesheet" href="./favicon_files/dotinstall.css">
+<link rel="stylesheet" href="./favicon_files/components.min.css">
+<link rel="stylesheet" href="./favicon_files/immersive-responsive.css">
+
+
+<link rel="stylesheet" href="./favicon_files/package-201905.css">
+
+<style>
+html, body { min-width: 536px; }
+</style>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-26578182-1', 'dotinstall.com');
+
+ga('set', 'userId', 'a324420fea10efef02cde640139018d467bd9a5f');
+
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+
+
+<script src="./favicon_files/bootstrap_328.min.js.ダウンロード"></script>
+<script src="./favicon_files/underscore.js.ダウンロード"></script>
+<script src="./favicon_files/es6-promise.auto.min.js.ダウンロード"></script>
+<script src="./favicon_files/main.js.ダウンロード"></script>
+<script src="./favicon_files/bundle.min.js.ダウンロード"></script>
+<script src="./favicon_files/dotinstall.bundle.min.js.ダウンロード"></script>
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:title" content="#01 プロフィールサイトを作ってみよう | はじめてのHTML">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dotinstall.com/lessons/basic_html_v5/49801">
+<meta property="og:site_name" content="ドットインストール">
+<meta property="og:description" content="完成版や必要なツールについて確認したのちに、画像素材について説明していきます。">
+<meta property="og:image" content="https://i.vimeocdn.com/video/808000241_960x540.jpg?r=pad">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:admins" content="569511872">
+<meta property="fb:app_id" content="128241633952367">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dotinstall">
+<meta name="twitter:title" content="#01 プロフィールサイトを作ってみよう | はじめてのHTML">
+<meta name="twitter:description" content="完成版や必要なツールについて確認したのちに、画像素材について説明していきます。">
+<meta name="twitter:image" content="https://i.vimeocdn.com/video/808000241_960x540.jpg?r=pad">
+
+<style></style></head>
+<body style="min-height: 1000px;">
+
+<style>
+.container.immersive #main {
+    min-width: 528px;
+}
+.container.immersive #sidebar {
+    width: 640px;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+
+    Dotinstall.sizes.MAIN_TOP_PADDING = 16;
+    Dotinstall.sizes.MAIN_HORIZONTAL_PADDING = 16 + 16;
+
+    Dotinstall.sizes.main = {
+        minWidth: 528 + Dotinstall.sizes.MAIN_HORIZONTAL_PADDING
+    };
+
+    Dotinstall.sizes.main.defaultMinWidth = Dotinstall.sizes.main.minWidth;
+
+    Dotinstall.sizes.sidebar = {
+        width: 640,
+        minWidth: 400
+    };
+
+    Dotinstall.sizes.sidebar.defaultMinWidth = Dotinstall.sizes.sidebar.minWidth;
+
+    Dotinstall.sizes.player = {
+        minWidth: 528
+    };
+
+    (function() {
+        var playerWidthRatio;
+        var styleEl;
+        if (Dotinstall.layout.isTheaterMode()) {
+            playerWidthRatio = Dotinstall.resize.player.getTheaterModePlayerWidthRatio();
+            styleEl = document.createElement('style');
+            document.head.appendChild(styleEl);
+            styleEl.sheet.insertRule(
+                '.video-commands-container, .caption-container { width: ' + playerWidthRatio * 100 + '%; }'
+            );
+        }
+    })();
+})();
+</script>
+
+<div id="fb-root" style="display:none;"></div>
+
+<div class="navbar navbar-fixed-top no-top-border  dotinstall-normal-topbar" id="lesson_show_page">
+
+
+<div class="navbar-inner" style="width: auto;">
+<div id="topbar_inner_container" class="container wide fit-to-left">
+
+<h1 class="logo">
+<a href="https://dotinstall.com/"><span>ドットインストール - 3分動画でマスターできるプログラミング学習サービス</span></a>
+</h1>
+
+<ul class="nav" id="global_menu" style="position: relative; font-size: 12px; display: block;">
+<li class=" disappear"><a href="https://dotinstall.com/home">マイページ</a></li>
+<li class="active movable" data-menu-index="1"><a href="https://dotinstall.com/lessons">レッスン一覧</a></li>
+<li class=" movable" data-menu-index="2"><a href="https://dotinstall.com/premium"><span style="font-weight:bold;color:#f39800;">プレミアム会員</span></a></li>
+<li class=" movable" data-menu-index="3"><a href="https://dotinstall.com/business">法人でのご利用</a></li>
+<li>
+<form action="https://dotinstall.com/search" id="topbar_search" class="form pull-left enable-incremental-lesson-search" onsubmit="if ($(this).find(&#39;.q&#39;).val() === &#39;&#39;) { return false; }">
+<div class="input-append" style="padding:12px 0 0 0;">
+<div class="btn-group">
+<input type="text" style="font-size: 12px; width: 180px;" placeholder="ソースコード、レッスンを検索" name="q" class="q" id="q_in_topbar" value="" autocomplete="off">
+<input type="hidden" name="f" value="topbar">
+<button type="submit" class="btn"><i class="icon-search"></i></button>
+</div>
+</div>
+<div id="incremental"></div>
+</form>
+
+</li>
+</ul><!-- /.nav -->
+
+<ul class="nav pull-right topbar-right-nav" id="global_pulldown">
+  <li class="dropdown">
+<b class="caret"></b>
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801#" title="kk23kk46" class="dropdown-toggle text-ellipsis" data-toggle="dropdown">
+<img src="./favicon_files/bug2.gif" class="topBarIcon">
+</a>
+
+<ul id="global_dropdown_menu" class="dropdown-menu">
+<li><a href="https://dotinstall.com/home">マイページ</a></li>
+<li class="divider show-narrowed"></li>
+<li><a href="https://dotinstall.com/users/kk23kk46" id="dropdown_user_profile">プロフィール</a></li>
+<li><a href="https://dotinstall.com/user/settings">設定変更</a></li>
+<li><a href="https://dotinstall.com/help">ヘルプ</a></li>
+
+
+<li class="divider"></li>
+<li><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" onclick="$(&#39;#logout-form&#39;).submit();">ログアウト</a><form id="logout-form" action="https://dotinstall.com/logout.php" method="post" style="display:none;"><input type="hidden" class="one_time_token" name="one_time_token" value="09e53892525da859ed66c80087606c925d35395ea83c2dbbacf47e9ad596ee26"></form></li>
+</ul><!-- /dropdown-menu -->
+
+</li>
+</ul><!-- /nav pull-right -->
+
+<ul class="nav pull-right">
+
+<li id="question_notification" title="質問のお知らせ" class="di-dropdown di-dropdown-align-center di-dropdown-large topbar-notification" data-user-id="593608" data-one-time-token="09e53892525da859ed66c80087606c925d35395ea83c2dbbacf47e9ad596ee26">
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="di-dropdown-toggle">
+<i class="fa fa-comments"></i>
+</a>
+<section class="di-dropdown-menu"><div class="triangle"></div>
+<header><h4>質問のお知らせ</h4></header>
+<div class="di-dropdown-menu-body">
+<ul id="question_notification_list" class="empty-list">
+<li class="di-dropdown-menu-placeholder">新着のお知らせはありません</li>
+</ul>
+</div><!-- /.di-dropdown-menu-body -->
+<footer>
+<a href="https://dotinstall.com/home#!questions">すべて見る</a>
+</footer>
+</section><!-- /.di-dropdown-menu -->
+</li><!-- /#question_notification -->
+
+<li id="news_notification" title="運営からのお知らせ" class="di-dropdown di-dropdown-align-center di-dropdown-large topbar-notification has-unread " data-user-id="593608" data-one-time-token="09e53892525da859ed66c80087606c925d35395ea83c2dbbacf47e9ad596ee26">
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="di-dropdown-toggle">
+<i class="fa fa-bell"></i>
+</a>
+<section class="di-dropdown-menu disable-hover" id="news_notification_menu"><div class="triangle"></div>
+<header><h4>運営からのお知らせ</h4></header>
+<div class="di-dropdown-menu-body">
+<ul class="">
+<li>
+<span class="news-publish-date">2020/12/02</span>
+<span class="news-new">NEW</span><p>
+<a href="https://dotinstall.com/lessons/basic_githubpages" target="_blank">今週は『GitHub Pagesでウェブサイトを公開しよう』をリリースしました。</a>
+</p>
+</li>
+<li>
+<span class="news-publish-date">2020/12/02</span>
+<span class="news-new">NEW</span><p>
+<a href="https://dotinstall.com/news/627" target="_blank">シアター表示がデフォルトになりました</a>
+</p>
+</li>
+<li>
+<span class="news-publish-date">2020/10/23</span>
+<p>
+<a href="https://dotinstall.com/lessons/basic_php_db_v2" target="_blank">今週は『詳解PHP データベース編』をリリースしました。</a>
+</p>
+</li>
+<li>
+<span class="news-publish-date">2020/10/21</span>
+<p>
+<a href="https://dotinstall.com/lessons/basic_unix_v3" target="_blank">今週は『UNIXコマンド入門』をリリースしました。</a>
+</p>
+</li>
+<li>
+<span class="news-publish-date">2020/10/12</span>
+<p>
+<a href="https://dotinstall.com/lessons/15puzzle_js_v2" target="_blank">今週は『JavaScriptで15パズルを作ろう』をリリースしました</a>
+</p>
+</li>
+<li>
+<span class="news-publish-date">2020/09/10</span>
+<p>
+<a href="https://dotinstall.com/lessons/basic_mysql_beginner" target="_blank">今週は『MySQL入門 基礎編』をリリースしました</a>
+</p>
+</li>
+</ul>
+</div><!-- /.di-dropdown-menu-body -->
+<footer>
+<a href="https://dotinstall.com/news">すべて見る</a>
+</footer>
+</section><!-- /.di-dropdown-menu -->
+</li><!-- /#news_notification -->
+
+</ul>
+
+</div><!--/container -->
+</div><!-- /navbar-inner -->
+</div><!-- /navbar -->
+
+
+<div id="theater_wrapper">
+<!-- /wide-notice-layout -->
+<!-- /#player_contents -->
+<!-- /#breadcrumb_wrapper -->
+<div class="wide-notice-layout">
+<div id="video_error_message" class="noticeBox round di-notice di-notice-error" data-notice-hide="true">
+動画の読み込みに失敗しました。しばらく待ってからリロードしてみてください。解決しない場合は <a href="https://dotinstall.com/help#video_trouble" target="_blank">ヘルプ「動画が見られない場合について」</a> もご覧ください。
+</div>
+</div><div id="player_contents">
+
+<meta itemprop="name" content="#01 プロフィールサイトを作ってみよう">
+<meta itemprop="duration" content="PT1M34S">
+<meta itemprop="thumbnailUrl" content="https://i.vimeocdn.com/video/808000241_200x150.jpg?r=pad">
+<meta itemprop="uploadDate" content="2019-08-22T15:21:01+09:00">
+
+<div id="video_section" class="posr" style="clear:both;"><!-- video section start -->
+<script id="vjs_center_card_template" type="text/template" data-tracking-label="video/end/premium"><!--
+<h4 class="vjs-center-card-header">レッスンで分からないところはありましたか？</h4>
+<p>プレミアム会員になると先生に質問することができます。</p>
+<p>詳しくはヘルプ「<a href="/help/415" class="link" target="_blank">質問機能とは？</a>」をご覧ください。</p>
+<div class="vjs-center-card-go-to">
+<a href="https://dotinstall.com/premium" class="btn btn-warning" target="_blank" onclick="ga('send', 'event', 'Button', 'Click', 'video/end/premium');">プレミアム会員に登録する</a>
+</div>
+--></script>
+
+
+
+<div playsinline="" preload="auto" oncontextmenu="return false;" controlslist="nodownload" class="video-js vjs-default-skin vjs-paused vjs-controls-enabled vjs-user-inactive" id="videojs_player" style="opacity: 1; width: 915.917px; height: 515.203px;"><video style="opacity: 1; width: 915.917px; height: 515.203px;" id="videojs_player_html5_api" class="vjs-tech" controlslist="nodownload" oncontextmenu="return false;" preload="auto" playsinline="" src="https://player.vimeo.com/external/355263155.hd.mp4?s=b22101f8a3f792928c83dc11bec48651d9f67159&amp;profile_id=174&amp;oauth2_token_id=56271396">
+  <source src="https://player.vimeo.com/external/355263155.hd.mp4?s=b22101f8a3f792928c83dc11bec48651d9f67159&amp;profile_id=174&amp;oauth2_token_id=56271396" data-res="720" data-voice="m" type="video/mp4">
+  <source src="https://player.vimeo.com/external/355263155.sd.mp4?s=6d14ed41b9c507352decaab088870952dff0ad18&amp;profile_id=164&amp;oauth2_token_id=56271396" data-res="360" data-voice="m" type="video/mp4">
+  </video><div></div><div class="vjs-poster vjs-hidden" tabindex="-1"></div><div class="vjs-loading-spinner"></div><div class="vjs-text-track-display vjs-hidden"></div><div class="vjs-big-play-button" role="button" aria-live="polite" tabindex="0" aria-label="play video"><span aria-hidden="true"></span></div><div class="vjs-control-bar"><div class="vjs-play-control vjs-control " role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-control-text">Play</span></div></div><div class="vjs-current-time vjs-time-controls vjs-control"><div class="vjs-current-time-display" aria-live="off"><span class="vjs-control-text">Current Time</span> 0:00</div></div><div class="vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-controls vjs-control"><div class="vjs-duration-display" aria-live="off"><span class="vjs-control-text">Duration Time</span> 1:33</div></div><div class="vjs-remaining-time vjs-time-controls vjs-control"><div class="vjs-remaining-time-display" aria-live="off"><span class="vjs-control-text">Remaining Time</span> -0:00</div></div><div class="vjs-live-controls vjs-control vjs-hidden"><div class="vjs-live-display" aria-live="off"><span class="vjs-control-text">Stream Type</span>LIVE</div></div><div class="vjs-progress-control vjs-control"><div role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-progress-holder vjs-slider" aria-label="video progress bar" aria-valuetext="0:00"><div class="vjs-load-progress" style="width: 49.596%;"><span class="vjs-control-text" style="left: 0%; width: 100%;"><span>Loaded</span>: 0%</span></div><div class="vjs-play-progress" style="width: 0%;"><span class="vjs-control-text"><span>Progress</span>: 0%</span></div><div class="vjs-seek-handle vjs-slider-handle" aria-live="off" style="left: 0%;"><span class="vjs-control-text">0:00</span></div></div></div><div class="vjs-volume-control vjs-control"><div role="slider" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-volume-bar vjs-slider" aria-label="volume level" aria-valuetext="90%"><div class="vjs-volume-level" style="width: 90%;"><span class="vjs-control-text"></span></div><div class="vjs-volume-handle vjs-slider-handle" style="left: 90%;"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-mute-control vjs-control vjs-vol-3" role="button" aria-live="polite" tabindex="0"><div><span class="vjs-control-text">Mute</span></div></div><div class="vjs-playback-rate vjs-menu-button vjs-control  vjs-hidden" role="button" aria-live="polite" tabindex="0" aria-haspopup="true"><div class="vjs-control-content"><span class="vjs-control-text">Playback Rate</span><div class="vjs-menu"><ul class="vjs-menu-content"></ul></div></div><div class="vjs-playback-rate-value">1</div></div><div class="vjs-subtitles-button vjs-menu-button vjs-control  vjs-hidden" role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Subtitles Menu"><div class="vjs-control-content"><span class="vjs-control-text">Subtitles</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">subtitles off</li></ul></div></div></div><div class="vjs-captions-button vjs-menu-button vjs-control  vjs-hidden" role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Captions Menu"><div class="vjs-control-content"><span class="vjs-control-text">Captions</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-item vjs-selected" role="button" aria-live="polite" tabindex="0" aria-selected="true">captions off</li></ul></div></div></div><div class="vjs-chapters-button vjs-menu-button vjs-control  vjs-hidden" role="button" aria-live="polite" tabindex="0" aria-haspopup="true" aria-label="Chapters Menu"><div class="vjs-control-content"><span class="vjs-control-text">Chapters</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-menu-title">Chapters</li></ul></div></div></div><div class="vjs-size-control vjs-menu-button vjs-control" aria-haspopup="true" role="button"><i class="vjs-current-size-icon vjs-size-icon vjs-size-icon-theater"></i><span class="vjs-current-size">シアター</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-size-item vjs-selected" aria-selected="true"><i class="vjs-size-icon vjs-size-icon-theater"></i>シアター</li><li class="vjs-size-item" aria-selected="false"><i class="vjs-size-icon vjs-size-icon-pinp"></i>ピクチャ</li><li class="vjs-size-item" aria-selected="false"><i class="vjs-size-icon vjs-size-icon-full"></i>全画面</li></ul></div></div><div class="vjs-speed-control vjs-menu-button vjs-control" aria-haspopup="true" role="button"><span class="vjs-current-speed">x1.0</span><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-premium-navi" aria-selected="false"><span class="vjs-premium-navi-text">プレミアム会員になると動画の速度を変更できます</span><button class="vjs-premium-navi-btn">詳しくみる</button></li></ul></div></div><div class="vjs-voice-button vjs-menu-button vjs-control" role="button" aria-live="polite" tabindex="0" aria-haspopup="true"><div class="vjs-control-content"><span class="vjs-current-voice">男性ボイス</span></div><div class="vjs-menu"><ul class="vjs-menu-content"><li class="vjs-premium-navi" aria-selected="false"><span class="vjs-premium-navi-text">プレミアム会員になると講義音声を切り替えられます</span><button class="vjs-premium-navi-btn">詳しくみる</button></li></ul></div></div><div class="vjs-res-button vjs-menu-button vjs-control" role="button" aria-live="polite" tabindex="0"><div class="vjs-control-content"><span class="vjs-current-res vjs-res-high">HD</span></div></div><div class="vjs-progress-helper"><div role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" tabindex="0" class="vjs-progress-holder vjs-slider" aria-label="video progress bar" aria-valuetext="0:00"><div class="vjs-load-progress" style="width: 49.596%;"><span class="vjs-control-text" style="left: 0%; width: 100%;"><span>Loaded</span>: 0%</span></div><div class="vjs-play-progress" style="width: 0%;"><span class="vjs-control-text"><span>Progress</span>: 0%</span></div><div class="vjs-seek-handle vjs-slider-handle" aria-live="off" style="left: 0%;"><span class="vjs-control-text">0:00</span></div></div></div></div><div class="vjs-error-display"><div></div></div><div class="vjs-caption-settings vjs-modal-overlay vjs-hidden"><div class="vjs-tracksettings"><div class="vjs-tracksettings-colors"><div class="vjs-fg-color vjs-tracksetting"><label class="vjs-label">Foreground</label><select><option value="">---</option><option value="#FFF">White</option><option value="#000">Black</option><option value="#F00">Red</option><option value="#0F0">Green</option><option value="#00F">Blue</option><option value="#FF0">Yellow</option><option value="#F0F">Magenta</option><option value="#0FF">Cyan</option></select><span class="vjs-text-opacity vjs-opacity"><select><option value="">---</option><option value="1">Opaque</option><option value="0.5">Semi-Opaque</option></select></span></div><div class="vjs-bg-color vjs-tracksetting"><label class="vjs-label">Background</label><select><option value="">---</option><option value="#FFF">White</option><option value="#000">Black</option><option value="#F00">Red</option><option value="#0F0">Green</option><option value="#00F">Blue</option><option value="#FF0">Yellow</option><option value="#F0F">Magenta</option><option value="#0FF">Cyan</option></select><span class="vjs-bg-opacity vjs-opacity"><select><option value="">---</option><option value="1">Opaque</option><option value="0.5">Semi-Transparent</option><option value="0">Transparent</option></select></span></div><div class="window-color vjs-tracksetting"><label class="vjs-label">Window</label><select><option value="">---</option><option value="#FFF">White</option><option value="#000">Black</option><option value="#F00">Red</option><option value="#0F0">Green</option><option value="#00F">Blue</option><option value="#FF0">Yellow</option><option value="#F0F">Magenta</option><option value="#0FF">Cyan</option></select><span class="vjs-window-opacity vjs-opacity"><select><option value="">---</option><option value="1">Opaque</option><option value="0.5">Semi-Transparent</option><option value="0">Transparent</option></select></span></div></div><div class="vjs-tracksettings-font"><div class="vjs-font-percent vjs-tracksetting"><label class="vjs-label">Font Size</label><select><option value="0.50">50%</option><option value="0.75">75%</option><option value="1.00" selected="">100%</option><option value="1.25">125%</option><option value="1.50">150%</option><option value="1.75">175%</option><option value="2.00">200%</option><option value="3.00">300%</option><option value="4.00">400%</option></select></div><div class="vjs-edge-style vjs-tracksetting"><label class="vjs-label">Text Edge Style</label><select><option value="none">None</option><option value="raised">Raised</option><option value="depressed">Depressed</option><option value="uniform">Uniform</option><option value="dropshadow">Dropshadow</option></select></div><div class="vjs-font-family vjs-tracksetting"><label class="vjs-label">Font Family</label><select><option value="">Default</option><option value="monospaceSerif">Monospace Serif</option><option value="proportionalSerif">Proportional Serif</option><option value="monospaceSansSerif">Monospace Sans-Serif</option><option value="proportionalSansSerif">Proportional Sans-Serif</option><option value="casual">Casual</option><option value="script">Script</option><option value="small-caps">Small Caps</option></select></div></div></div><div class="vjs-tracksettings-controls"><button class="vjs-default-button">Defaults</button><button class="vjs-done-button">Done</button></div></div><div class="vjs-card vjs-comment-card vjs-card-top vjs-card-left vjs-card-show">この動画には 2 件の補足情報があります。</div><div class="vjs-card vjs-center-card vjs-card-hidden vjs-card-hidden-strongly" style="margin-top: 179.102px;"><div class="vjs-center-card-contents">
+<h4 class="vjs-center-card-header">レッスンで分からないところはありましたか？</h4>
+<p>プレミアム会員になると先生に質問することができます。</p>
+<p>詳しくはヘルプ「<a href="https://dotinstall.com/help/415" class="link" target="_blank">質問機能とは？</a>」をご覧ください。</p>
+<div class="vjs-center-card-go-to">
+<a href="https://dotinstall.com/premium" class="btn btn-warning" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Button&#39;, &#39;Click&#39;, &#39;video/end/premium&#39;);">プレミアム会員に登録する</a>
+</div>
+</div></div></div>
+
+<script>Dotinstall.resize.player.exec();</script>
+
+<script>
+HMHM.movie.availableQualities = ['720', '360'];
+HMHM.movie.hasWomanVoice = true;
+</script>
+
+
+
+<script>
+$(function() {
+    if ($('#vimeo_player')[0]) {
+        if (window.addEventListener) {
+            window.addEventListener('message', HMHM.movie.vimeo.onMessageReceived, false);
+        } else {
+            window.attachEvent('onmessage', HMHM.movie.vimeo.onMessageReceived);
+        }
+    }
+});
+</script>
+
+
+<script src="./favicon_files/video.min.js.ダウンロード"></script>
+
+<script>
+    videojs.options.flash.swf = "http://dotinstall.com/video-js.swf";
+</script>
+
+<script src="./favicon_files/videojs-progress-helper.js.ダウンロード"></script>
+
+<script src="./favicon_files/videojs-quality-selector.js.ダウンロード"></script>
+<script src="./favicon_files/videojs-size-selector.js.ダウンロード"></script>
+<script src="./favicon_files/basic_html_v5.js.ダウンロード"></script>
+<script src="./favicon_files/videojs-card.js.ダウンロード"></script>
+
+<script src="./favicon_files/videojs.speed.sample.js.ダウンロード"></script>
+<script src="./favicon_files/videojs-voice-selector-sample.js.ダウンロード"></script>
+<script src="./favicon_files/videojs-analyzer.js.ダウンロード"></script>
+
+<div class="lesson-components">
+<div class="videoCommands">
+<div class="video-commands-container" style="width: 72.5%;">
+    <div class="doneButtonMessage" id="lesson_complete_message">
+      <p class="doneButtonMessage__text">
+        <span id="lesson_complete_message_complete_lesson_count"></span><span id="lesson_complete_message_unit">本</span>のレッスンが完了！<span id="lesson_complete_message_total_lesson_count"></span>
+      </p>
+      <div class="doneButtonMessage__progressBar">
+        <div class="doneButtonMessage__progressBar-gray">
+          <div class="doneButtonMessage__progressBar-green" id="lesson_complete_message_bar" style="width: 0%;"></div>
+        </div>
+        <div id="lesson_complete_message_particle"></div>
+      </div>
+    </div>
+
+    <a class="btn lh24 flr" id="toggle_text"><span class="showText">文字起こしを<span id="toggle_text_label">閉じる</span></span></a>
+
+    <a class="btn lh24 disabled" style="font-size:10px;">« 前へ</a>
+            <button id="lesson-complete-button" class="btn">
+          <span id="completeButtonLabel">
+            完了          </span>
+        </button>
+    
+    <a href="https://dotinstall.com/lessons/basic_html_v5/49802" class="btn lh24" id="go_to_next_video" data-has-next-video="1" style="font-size:10px;">次へ »</a>
+
+</div><!-- /video-commands-container -->
+</div><!-- /videoCommands -->
+
+<div id="caption_base_top" data-is-premium="false"></div><!-- don't remove! -->
+<div id="caption_wrapper">
+
+  
+          <div id="caption" style="height: 170px; overflow-y: scroll;">
+        <div class="caption-container" style="width: 72.5%;">
+        <div class="caption-revert-auto-scroll">自動スクロールを再開</div>
+
+                  <div class="explain-premium-flat-bg explain-premium-flat-transcript">
+<div class="explain-premium-flat-card" style="width: 915.917px;">
+<p>このレッスンの文字起こしはサンプルとして公開中です。</p>
+<p>プレミアム会員になると、全レッスンの文字起こしを見られるようになります。</p>
+<div class="explain-premium-flat-btn-area">
+<a href="https://dotinstall.com/premium" class="explain-premium-flat-btn" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Button&#39;, &#39;Click&#39;, &#39;explain_premium_flat/文字起こし/premium&#39;);">詳しくみる</a>
+</div><!-- /.explain-premium-flat-btn-area -->
+</div><!-- /.explain-premium-flat-card -->
+</div><!-- /.explain-premium-flat-bg -->
+        
+                  <div class="caption-row" data-time="0:02">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:02</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                このレッスンでは、こうしたポートフォリオサイトを作りながら HTML という言語について学んでいきましょう。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:08">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:08</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                アイコンと名前があって、作品紹介に続いてフッターがあるようなシンプルなサイトですね。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:16">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:16</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                なお、このようなサイトをインターネット上に公開するには、また別の勉強が必要になるのですが、今回のレッスンではまずはこうした画面を作れるようになるところまでを扱っていきたいと思います。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:26">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:26</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                今回はブラウザは Chrome 、そしてエディタは VS Code を使っていきます。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:31">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:31</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                レッスンと同じツールを使ったほうが混乱しないので、慣れていない人は必ず用意するようにしておいてください。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:37">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:37</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                それから画像素材ですが、今回デスクトップに MyPortfolio というフォルダを用意しておきました。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:43">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:43</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                こちらに画像を用意しておいたので確認しておきましょう。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:47">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:47</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                まずは favicon.ico というファイルはブラウザのこちらに表示されているアイコンのファイルになります。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:54">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:54</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                少し特殊なファイルなので MyPortfolio フォルダの直下に置いておきました。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="0:59">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">0:59</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                それ以外の画像素材は MyPortfolio フォルダの中の img フォルダの中に入れておいたのであとで使っていきましょう。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="1:09">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">1:09</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                なお、これらの画像ファイルはレッスン動画下の素材タブからダウンロードできるので今のうちに用意しておいてください。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="1:16">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">1:16</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                それから、こちらの MyPortfolio フォルダや img フォルダは自分で作る必要があるのでご自身で作成しておいてください。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+                  <div class="caption-row" data-time="1:24">
+            <div class="cinfo"><span class="iconSound none"><a href="https://dotinstall.com/lessons/basic_html_v5/49801#" class="cinfo-link">1:24</a></span></div>
+            <div class="cbody-liquid ">
+              <div class="cbody">
+                ではファイルを作っていきたいのですが、少し長くなってきたので続きは次回にしていきます。              </div><!-- /.cbody -->
+            </div><!-- /.cbody-liquid -->
+          </div><!-- /.caption-row -->
+        
+                  <div class="explain-premium-flat-bg explain-premium-flat-transcript">
+<div class="explain-premium-flat-card" style="width: 915.917px;">
+<p>このレッスンの文字起こしはサンプルとして公開中です。</p>
+<p>プレミアム会員になると、全レッスンの文字起こしを見られるようになります。</p>
+<div class="explain-premium-flat-btn-area">
+<a href="https://dotinstall.com/premium" class="explain-premium-flat-btn" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Button&#39;, &#39;Click&#39;, &#39;explain_premium_flat/文字起こし/premium&#39;);">詳しくみる</a>
+</div><!-- /.explain-premium-flat-btn-area -->
+</div><!-- /.explain-premium-flat-card -->
+</div><!-- /.explain-premium-flat-bg -->
+        
+        <div id="caption_bottom_space" style="height: 135px;"></div>
+        </div><!-- /caption-container -->
+      </div><!-- /caption -->
+
+      </div><!-- /caption_wrapper -->
+<div id="caption_handle"><i class="icon-align-justify icon-gray"></i></div>
+
+<script>
+(function() {
+    if (HMHM.cookie.get('display_caption') === null || HMHM.cookie.get('display_caption') == 1) {
+        $('#caption_wrapper').show();
+        $('#caption_handle').show();
+        $('#toggle_text_label').text('閉じる');
+    } else {
+        $('#caption_wrapper').hide();
+        $('#caption_handle').hide();
+        $('#toggle_text_label').text('表示する');
+    }
+})();
+</script>
+</div>
+
+</div><!-- //video_section -->
+
+</div><div id="breadcrumb_wrapper">
+<ul class="lesson-breadcrumb" id="breadcrumb" style="width: 915.917px;">
+<li><span class="breadcrumb-open-sidebar" id="breadcrumb_open_sidebar"><i class="fa fa-bars"></i></span></li>
+<li style=""><a href="https://dotinstall.com/lessons/basic_html_v5">はじめてのHTML</a></li>
+<li style="width: 765.917px;">» #01 プロフィールサイトを作ってみよう</li>
+</ul>
+</div></div><!-- /#theater_wrapper -->
+
+<div id="main_container" class="container immersive">
+
+<div class="row fade-in" id="contents_root_row">
+<div class="span13" id="main" style="position: relative; visibility: visible; width: 903px; height: 875px;">
+
+<div id="main_contents" itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject">
+
+<div id="player_contents_wrapper">
+</div><!-- /#player_contents_wrapper -->
+
+<script>(function() { 'use strict'; Dotinstall.layout.updatePlayerMode(); })();</script>
+
+<ul class="nav nav-tabs" id="lesson_tabs">
+<li class="">
+<a data-toggle="tab" href="https://dotinstall.com/lessons/basic_html_v5/49801#summary" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Tabs&#39;, &#39;Click&#39;, &#39;lesson/show/movie&#39;);">この動画について<span class="s10">&nbsp;</span></a>
+</li>
+<li id="question_tab">
+<a data-toggle="tab" href="https://dotinstall.com/lessons/basic_html_v5/49801#question" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Tabs&#39;, &#39;Click&#39;, &#39;lesson/show/faq&#39;);">質問と回答 <span class="s10">(13)</span></a>
+</li>
+<li id="material_tab" class="active">
+<a data-toggle="tab" href="https://dotinstall.com/lessons/basic_html_v5/49801#material" id="tab_material" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Tabs&#39;, &#39;Click&#39;, &#39;lesson/show/material&#39;);">素材<span class="s10">&nbsp;</span></a>
+</li>
+</ul>
+
+<div class="tab-content" style="min-height:300px;">
+
+<div class="tab-pane posr" id="summary">
+
+<div id="video_summary">
+<p itemprop="description" id="lesson_description">完成版や必要なツールについて確認したのちに、画像素材について説明していきます。</p>
+
+<ul id="lesson_summary">
+    <li class="lh18">完成版の確認</li>
+    <li class="lh18">開発ツールの確認</li>
+    <li class="lh18">画像素材の確認</li>
+</ul>
+
+</div><!-- /video_summary -->
+<div class="commentBox round" id="supplement_1499">
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801#supplement_1499">
+<div class="comment-created-at flr s12 caaa">
+<span title="2020-05-18 22:25:13">
+2020年5月18日
+</span>
+</div>
+</a>
+<h3 class="comment-header s13b page-header">
+<span class="comment-label label label-info">補足情報</span>
+VS Codeの色は黒のままでかまいません
+</h3>
+<div class="comment-body breakWord markdown-body">
+<p>・HTML/CSSの学習環境を整えよう [Windows編] (全5回)<br>
+<a href="https://dotinstall.com/lessons/basic_pcsetup_win_v2">https://dotinstall.com/lessons/basic_pcsetup_win_v2</a><br>
+・HTML/CSSの学習環境を整えよう [macOS編] (全5回)<br>
+<a href="https://dotinstall.com/lessons/basic_pcsetup_mac_v2">https://dotinstall.com/lessons/basic_pcsetup_mac_v2</a></p>
+<p>上記のレッスンを終えるとVS Codeの背景色は黒になっていますが、レッスン動画では見やすくなるように背景色が白いテーマを使っております。背景が黒いままでも問題ありませんのでそのまま学習を進めてください。</p>
+</div>
+</div>
+<div class="commentBox round" id="supplement_1359">
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801#supplement_1359">
+<div class="comment-created-at flr s12 caaa">
+<span title="2019-10-02 01:16:43">
+2019年10月2日
+</span>
+</div>
+</a>
+<h3 class="comment-header s13b page-header">
+<span class="comment-label label label-info">補足情報</span>
+必要となる知識について
+</h3>
+<div class="comment-body breakWord markdown-body">
+<p>このレッスンを始める前に、以下を参考にして学習環境を整えるようにしましょう。</p>
+<p>・HTML/CSSの学習環境を整えよう [Windows編] (全5回)<br>
+<a href="https://dotinstall.com/lessons/basic_pcsetup_win_v2">https://dotinstall.com/lessons/basic_pcsetup_win_v2</a><br>
+・HTML/CSSの学習環境を整えよう [macOS編] (全5回)<br>
+<a href="https://dotinstall.com/lessons/basic_pcsetup_mac_v2">https://dotinstall.com/lessons/basic_pcsetup_mac_v2</a></p>
+</div>
+</div>
+
+<p class="txr mb15"><a href="https://dotinstall.com/contact?ru=/lessons/basic_html_v5/49801" rel="nofollow" class="caaa s11">このレッスンの問題を報告する</a></p>
+
+
+</div><!-- /movie -->
+
+<div id="question" class="tab-pane">
+
+
+<section>
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/glr12u7" class="not-premium">command + &lt; で設定が開くようになってしまいました...</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年11月6日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/4o4m3h8" class="not-premium">何回も練習するにはどうしたらいいですか？</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年11月3日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/4omj9f8" class="not-premium">完成版はどこからみれるのでしょうか？</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年10月2日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/j7q89b1" class="not-premium">説明がmacOS主体ですが、Windowsではどのようにしたらいいのでしょうか？</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年10月2日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/kz5rnh0" class="not-premium">VS Codeの画面が黒いままで白くなりません</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月20日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/7vk7kfk" class="not-premium">「Open Folder」が見当たらない</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月20日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/1777yiy" class="not-premium">MyPortfolioフォルダはつくれましたが、その後が混乱しています</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月7日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/xeg95fd" class="not-premium">MyPortfolioフォルダがありません</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月1日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/gl21qa7" class="not-premium">VS Codeの表示の仕方がわかりません。</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月7日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/xeg1rtd" class="not-premium">Macでデスクトップに素材が出せません</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月7日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/4j95c8v" class="not-premium">画像素材をimgフォルダに移す方法がわかりません</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月7日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/x3j8bdk" class="not-premium">VS Codeの左側がレッスンどおりになりません</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月7日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+<div class="pub-qa-list-row">
+<div class="q-list-icon">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x q-circle-bg not-premium"></i>
+<i class="fa fa-lock q-lock-icon fa-stack-1x"></i>
+</span>
+</div><!-- /.q-list-icon -->
+<div class="q-list-summary">
+<div class="q-list-title">
+<a href="https://dotinstall.com/questions/yj94am8" class="not-premium">素材がダウンロードできません。WinZipが必要なのですか？</a>
+</div><!-- /.q-list-title -->
+</div><!-- /.q-list-summary -->
+<div class="q-list-suffix">
+<span class="q-list-date">2020年5月1日</span>
+</div>
+</div><!-- /.pub-qa-list-row -->
+</section>
+
+<div class="to-package-pub-qa-list">
+<i class="fa fa-chevron-right"></i>
+<a href="https://dotinstall.com/lessons/basic_html_v5#!faq">このレッスンに関する質問をすべて見る (76)</a>
+</div>
+
+
+<section class="lets-qa">
+<div class="lets-qa-img lets-qa-left"><img src="./favicon_files/lets-qa-student.png"></div>
+
+<div class="lets-qa-main">
+<p class="lets-qa-lead">
+<a href="https://dotinstall.com/premium">プレミアム会員</a>になると、わからないところを先生に質問できます。
+</p>
+
+
+  <button class="di-btn di-btn-icon di-btn-info disabled" disabled="">
+    <i class="fa fa-comment"></i>
+    <span>この動画について先生に質問</span>
+  </button>
+
+
+<p class="lets-qa-about-q">
+<i class="fa fa-question-circle"></i>
+<a href="https://dotinstall.com/help/415">質問機能とは？</a>
+</p>
+
+</div><!-- /.lets-qa-main -->
+
+<div class="lets-qa-img lets-qa-right"><img src="./favicon_files/lets-qa-teacher.png"></div>
+</section><!-- /.lets-qa -->
+
+
+</div>
+<!-- question-tab -->
+
+<div id="material" class="tab-pane active">
+<div class="materials">
+
+<div class="material-download-btn-layout">
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801/download" class="di-btn di-btn-info di-btn-icon" download="basic_html_v5.zip">
+<i class="fa fa-download"></i>
+<span>すべての素材をまとめてダウンロード</span>
+</a>
+<div class="material-download-help">
+<a href="https://dotinstall.com/help/814">素材ファイル(zip)の利用方法</a>
+</div><!-- /.material-download-help -->
+</div><!-- /.material-download-btn-layout -->
+
+<div class="materials-preview-layout">
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/favicon.ico" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/favicon.ico&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">favicon.ico</span>
+</div>
+</div>
+</div>
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/blog.png" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/blog.png&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">blog.png</span>
+</div>
+</div>
+</div>
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/photos.png" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/photos.png&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">photos.png</span>
+</div>
+</div>
+</div>
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material large-image" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/taro.png" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/taro.png&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">taro.png</span>
+</div>
+</div>
+</div>
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material large-image" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/work1.png" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/work1.png&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">work1.png</span>
+</div>
+</div>
+</div>
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material large-image" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/work2.png" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/work2.png&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">work2.png</span>
+</div>
+</div>
+</div>
+<div class="material-item-layout" style="width: 221.25px;">
+<div class="material-item">
+<div class="material large-image" data-src="https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/work3.png" style="height: 205.25px; background-image: url(&quot;https://dotinstall.com/samples/basic_html_v5/49801/MyPortfolio/img/work3.png&quot;);">
+</div><!-- /.material -->
+<div class="material-filename-layout">
+<span class="material-filename">work3.png</span>
+</div>
+</div>
+</div>
+</div><!-- /.materials-preview-layout -->
+
+</div><!-- /.materials -->
+
+<div class="explain_premium">
+
+  
+  <div style="padding:34px;text-align:center;">
+          <p class="s13b free_package_explain">はじめてのHTML、はじめてのCSS、はじめてのJavaScriptの素材ファイルはサンプルとして公開中です。</p>
+    
+          <div class="premium_registration">
+        <p class="s13b">
+          プレミアム会員(月額1080円)になると、全レッスンの素材ファイルをダウンロードできます。
+        </p>
+        <a href="https://dotinstall.com/premium" class="btn btn-warning lh28" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Button&#39;, &#39;Click&#39;, &#39;explain_premium/素材ファイル/premium&#39;);">詳しい説明を読む</a>
+      </div>
+    
+  </div>
+</div><!-- /explain_premium -->
+
+</div><!-- /material -->
+
+
+
+</div><!-- /tab-content -->
+
+</div><!-- /itemprop -->
+
+</div><!-- /main -->
+
+<script>
+(function() {
+    // Sidebar has not been presented yet.
+    var SIDEBAR_WIDTH = 640;
+
+          SIDEBAR_WIDTH = 0;
+    
+    if (Dotinstall.layout.mustBeSingleCol()) {
+        
+        $('#main').width(
+            $(window).width() - Dotinstall.sizes.MAIN_HORIZONTAL_PADDING
+        );
+    } else {
+        
+        $('#main').width(
+            $(window).width() - SIDEBAR_WIDTH - Dotinstall.sizes.MAIN_HORIZONTAL_PADDING
+        );
+    }
+
+    Dotinstall.resize.player.exec();
+
+    document.getElementById('contents_root_row').classList.add('fade-in');
+
+    $('#main').css({
+        visibility: 'visible'
+    });
+})();
+</script>
+
+<div id="sidebar" class="ready" style="width: 0px; left: 915px; top: 55px; height: 891px; right: auto;">
+<div id="sidebar_contents">
+
+
+</div><!-- /sidebar_contents -->
+</div><!-- /sidebar -->
+
+<div id="overlay_sidebar" class="fold" style="height: 1675px; top: 53px;">
+
+<div id="overlay_sidebar_contents">
+
+<h2 class="text-ellipsis" id="side_package_name_header">
+<a href="https://dotinstall.com/lessons/basic_html_v5" id="side_package_name">
+  はじめてのHTML
+</a>
+</h2>
+
+<div class="ovs-stats-layout">
+<div id="lesson_stat_graph">
+<div id="myStat" data-dimension="80" data-text="0%" data-width="12" data-percent="0" data-fgcolor="#5eb95e" class="circliful" style="width: 80px;"><span class="circle-text" style="line-height: 80px; font-size: 15px;">0%</span><canvas width="80" height="80"></canvas></div><!-- /myStat -->
+</div><!-- /lesson_stat_graph -->
+<div id="lesson_stat_summary" class="s12">
+<dl class="packageInfo">
+<dt>完了レッスン数</dt>
+<dd><span id="completed_lesson_count" class="s12b">0</span> / 14 回</dd>
+<dt>完了率</dt>
+<dd>
+<strong>
+<span id="complete_average">0</span>
+</strong> %
+</dd>
+<dt>あなたの閲覧数</dt>
+<dd><strong><span id="history_count">3</span></strong> 回</dd>
+</dl>
+</div><!-- /lesson_stat_summary -->
+</div><!-- /flex -->
+
+<h2 id="video_list_header" class="ovs-list-header">
+<label for="autoplay" class="autoplay flr">
+<input type="checkbox" id="autoplay">
+連続再生を有効にする
+</label>
+
+<i class="fa fa-play-circle ovs-list-header-icon" id="video_list_header_icon"></i>
+<span class="ovs-list-header-str" id="video_list_header_str">
+動画一覧
+<span class="s11">(14)</span>
+</span>
+</h2>
+
+<ul id="side_lessons">
+<li id="lesson_row_49801" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle current"></i>
+#01
+<a href="https://dotinstall.com/lessons/basic_html_v5/49801" class="current lesson_title">プロフィールサイトを作ってみよう</a>
+</li>
+<li id="lesson_row_49802" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#02
+<a href="https://dotinstall.com/lessons/basic_html_v5/49802" class="lesson_title">ブラウザに名前を表示しよう</a>
+</li>
+<li id="lesson_row_49803" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#03
+<a href="https://dotinstall.com/lessons/basic_html_v5/49803" class="lesson_title">タグでマークアップしてみよう</a>
+</li>
+<li id="lesson_row_49804" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#04
+<a href="https://dotinstall.com/lessons/basic_html_v5/49804" class="lesson_title">imgタグで画像を表示しよう</a>
+</li>
+<li id="lesson_row_49805" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#05
+<a href="https://dotinstall.com/lessons/basic_html_v5/49805" class="lesson_title">全角文字に気をつけよう</a>
+</li>
+<li id="lesson_row_49806" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#06
+<a href="https://dotinstall.com/lessons/basic_html_v5/49806" class="lesson_title">文書全体につけるタグを見ていこう</a>
+</li>
+<li id="lesson_row_49807" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#07
+<a href="https://dotinstall.com/lessons/basic_html_v5/49807" class="lesson_title">文書に関する情報を設定しよう</a>
+</li>
+<li id="lesson_row_49808" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#08
+<a href="https://dotinstall.com/lessons/basic_html_v5/49808" class="lesson_title">文書の本文を書き込んでいこう</a>
+</li>
+<li id="lesson_row_49809" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#09
+<a href="https://dotinstall.com/lessons/basic_html_v5/49809" class="lesson_title">コメントタグを使ってみよう</a>
+</li>
+<li id="lesson_row_49810" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#10
+<a href="https://dotinstall.com/lessons/basic_html_v5/49810" class="lesson_title">header､footerタグを使ってみよう</a>
+</li>
+<li id="lesson_row_49811" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#11
+<a href="https://dotinstall.com/lessons/basic_html_v5/49811" class="lesson_title">sectionタグを使ってみよう</a>
+</li>
+<li id="lesson_row_49812" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#12
+<a href="https://dotinstall.com/lessons/basic_html_v5/49812" class="lesson_title">ulタグでリストを表現してみよう</a>
+</li>
+<li id="lesson_row_49813" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#13
+<a href="https://dotinstall.com/lessons/basic_html_v5/49813" class="lesson_title">外部サイトへのリンクを設定しよう</a>
+</li>
+<li id="lesson_row_49814" class="text-ellipsis">
+<i class="fa fa-fw fa-play-circle "></i>
+#14
+<a href="https://dotinstall.com/lessons/basic_html_v5/49814" class="lesson_title">HTMLの仕様を確認してみよう</a>
+</li>
+</ul>
+
+</div><!-- /#overlay_sidebar_contents -->
+
+</div><!-- /#overlay_sidebar -->
+
+<div id="main_overlay" style="top: 53px; height: 1675px; width: 1295px;"></div>
+
+</div><!-- /row -->
+</div><!-- /container -->
+
+<div id="resize_handle" class="resize-handle " style="top: 2274.13px; left: 8181px; height: 889px;"></div>
+
+
+<input type="hidden" id="package_id" value="498">
+<input type="hidden" id="lesson_id" value="49801">
+<input type="hidden" id="sequence" value="1">
+<input type="hidden" id="user_id" value="593608">
+<input type="hidden" id="user_name" value="kk23kk46">
+<input type="hidden" id="profile_image_url" value="">
+<input type="hidden" id="open_lesson_history" value="1">
+<input type="hidden" id="is_premium" value="0">
+<input type="hidden" class="one_time_token" name="one_time_token" value="09e53892525da859ed66c80087606c925d35395ea83c2dbbacf47e9ad596ee26">
+
+<div id="footer" class="no-margin-footer            ">
+
+<div class="container wide fit-to-left">
+
+<div class="footer-inner-container">
+
+<div class="footer-logo-contents footer-logo">
+<img src="./favicon_files/footer-logo-vertical.png" width="143" height="96" alt="dotinstall">
+<p>3分動画でマスターできるプログラミング学習サービスです。あなたもプログラミングを始めてみませんか？</p>
+</div><!-- /footer-contents -->
+
+<div class="footer-links-contents">
+<div class="footer-contents">
+<h3>サービスメニュー</h3>
+<ul>
+<li><a href="https://dotinstall.com/lessons">レッスン一覧</a></li>
+<li><a href="https://dotinstall.com/premium">プレミアム会員</a></li>
+<li><a href="https://dotinstall.com/business">法人向けライセンス</a></li>
+<li><a href="https://dotinstall.com/news">運営からのお知らせ</a></li>
+<li><a href="https://dotinstall.com/guide">プログラミング学習ガイド</a></li>
+<li><a href="https://dotinstall.com/help">ヘルプ</a></li>
+</ul>
+</div><!-- /footer-contents -->
+
+<div class="footer-contents">
+<h3>ご利用にあたって</h3>
+<ul>
+<li><a href="https://dotinstall.com/terms">利用規約</a></li>
+<li><a href="https://dotinstall.com/privacy">プライバシーポリシー</a></li>
+<li><a href="https://company.dotinstall.com/" target="_blank">運営企業情報</a></li>
+<li><a href="https://company.dotinstall.com/recruit.html" target="_blank">採用情報</a></li>
+<li><a href="https://note.com/dotinstall/n/nfc979e2683cb" target="_blank">教材利用について</a></li>
+<li><a href="https://dotinstall.com/contact">お問い合わせ</a></li>
+</ul>
+</div><!-- /footer-contents -->
+
+<div class="footer-contents">
+<h3>学習支援ツール</h3>
+<ul>
+<li><a href="http://blog.dotinstall.com/post/139045656660/dotinstallpane" target="_blank">Dotinstall Pane</a></li>
+</ul>
+<h3>ソーシャルメディア</h3>
+<ul>
+<li><a href="http://facebook.com/dotinstall">Facebookページ</a></li>
+<li><a href="http://twitter.com/dotinstall">Twitter (@dotinstall)</a></li>
+<li><a href="https://note.com/dotinstall">公式ブログ</a></li>
+</ul>
+<h3>更新情報</h3>
+<ul class="rss">
+<li><i class="fa fa-rss"></i> <a href="https://dotinstall.com/lessons.rss">新着レッスンRSS</a></li>
+<li><i class="fa fa-rss"></i> <a href="https://dotinstall.com/lessons/knowledge.rss">新着補足情報RSS</a></li>
+</ul>
+</div><!-- /footer-contents -->
+</div><!-- /footer-links-contents -->
+
+</div><!-- /footer-inner-container -->
+
+<p class="copyright">
+Copyright © 2011-2020 dotinstall.com. All Rights Reserved.
+</p>
+
+
+</div><!-- /container -->
+
+</div><!-- /footer -->
+
+<script src="./favicon_files/packages_for_search.js.ダウンロード"></script>
+
+                    <script id="videojs_onready_script">
+(function(vjs) {
+    var HIGH_RES = 720;
+
+    var defaultResolution = HMHM.movie.videojs.getDefaultPlaybackQuality(HIGH_RES)
+      , defaultVoice      = HMHM.movie.videojs.getDefaultVoice('m')
+      , defaultSpeed      = HMHM.movie.videojs.getCurrentPlaybackSpeed(1.0)
+      , defaultVolume     = HMHM.movie.videojs.getDefaultVolume(0.9)
+      , defaultMuted      = HMHM.movie.videojs.getDefaultMuted()
+      , videoNum          = { "video/mp4": 0, "video/webm": 0 }
+      , forceMimeTypes    = ['video/mp4', 'video/webm']
+      , plugins = {};
+
+    // count video source type
+    $('video').find('source').each(function() {
+        videoNum[$(this).attr('type')]++;
+    });
+
+    // if MP4 only, IE8 and Opera need flash plugin
+    if (videoNum['video/mp4'] > 0 && videoNum['video/webm'] === 0) {
+        if (HMHM.navigator.isIE8 || HMHM.navigator.isOpera) {
+            if (!HMHM.navigator.isAvailableFlash()) {
+                $('#flash_warning').show();
+                return false;
+            }
+        }
+    }
+
+          if (document.getElementById('theater_wrapper') !== null) {
+          plugins.Size = {
+              default_size: 'theater'
+          };
+      }
+    
+    plugins.Speed = {
+        //available_speeds: [2, 1.8, 1.6, 1.4, 1.2, 1, 0.9, 0.8, 0.7],
+        default_speed: defaultSpeed
+    };
+
+    plugins.VoiceSelector = {
+        default_voice: defaultVoice
+    };
+
+    plugins.ResolutionSelector = {
+        force_types: forceMimeTypes,
+        default_res: defaultResolution
+    };
+
+    plugins.ProgressHelper = {
+    };
+
+    plugins.Card = {
+        comment_count: 2
+    };
+
+    vjs('videojs_player', {
+        inactivityTimeout: 200,
+        notSupportedMessage: '動画の読み込みに失敗しました。ブラウザをリロードしてみてください。',
+        controlBar: {
+          fullscreenToggle: false
+        },
+        plugins: plugins
+    }).ready(function() {
+        //var tracking = $(this.el()).data('tracking');
+
+        if (Dotinstall.layout.mustBeNormalMode()) {
+            this.Size.button.menu.children()[1].trigger('click');
+        }
+
+        $(this.el()).css('opacity', 1);
+        $(this.el().firstChild).css('opacity', 1);
+
+        if (HMHM.navigator.isIE8) {
+            setTimeout(function() {
+                HMHM.movie.videojs.player_.play();
+            }, 1);
+        }
+
+        this.on(['tap'], function(e) {
+            if (e.target.id === 'videojs_player_html5_api') {
+                if (this.paused()) {
+                    this.play();
+                } else {
+                    this.pause();
+                }
+            }
+        });
+
+        // hide liveDisplay
+        this.controlBar.liveDisplay.hide();
+
+        // set volume
+        this.volume(defaultVolume);
+
+        // set muted
+        this.muted(defaultMuted);
+
+        this.on('loadeddata', function() {
+            HMHM.movie.videojs.on.loadeddata();
+        });
+
+        this.on('play', function() {
+            HMHM.movie.videojs.on.play();
+            Dotinstall.player.alert.closeVolumeAlert('basic_html_v5');
+        });
+
+        this.on('pause', function() {
+            HMHM.movie.videojs.on.pause();
+        });
+
+        this.on('ended', function() {
+            HMHM.movie.videojs.on.ended();
+        });
+
+        this.on('timeupdate', function() {
+            HMHM.movie.videojs.on.timeupdate();
+        });
+
+        this.on('changeRes', function() {
+            HMHM.movie.videojs.on.changeResolution(this.getCurrentRes());
+        });
+
+        this.on('volumechange', function() {
+            HMHM.movie.videojs.on.volumeChange(this.volume());
+        });
+
+        this.on('fullscreenchange', function() {
+            if ($(this.el()).hasClass('vjs-my-fullscreen')) {
+                this.removeClass('vjs-my-fullscreen');
+            } else {
+                this.addClass('vjs-my-fullscreen');
+                HMHM.movie.autoplay.logIfOn();
+            }
+
+            Dotinstall.ga.tracking('Player', 'Click', 'fullscreenToggle', this.isFullscreen() === true ? 1 : 0);
+        });
+
+        this.on('error', function(e) {
+            HMHM.movie.videojs.on.error(this.error(), this.currentSrc());
+        });
+
+        this.getChild('controlBar').getChild('muteToggle').on('click', function() {
+            Dotinstall.ga.tracking('Player', 'Click', 'muteToggle', this.player().muted() === true ? 1 : 0);
+            HMHM.movie.videojs.on.muted(this.player().muted() === true ? 1 : 0);
+        });
+
+        // if #videojs_player element is clicked, move focus to play button
+        $('#videojs_player, .vjs-big-play-button').on('click', function(e) {
+            $('.vjs-play-control.vjs-control').focus();
+        });
+
+        // prevent scroll pressed space key if playing button is active.
+        $(document).keydown(function(e) {
+            if (/( |^)vjs-(playing|paused)( |$)/.test(document.activeElement.className)
+                && e.which === 32)
+            {
+                return false;
+            }
+        });
+
+        HMHM.movie.videojs.playerReady = true;
+        HMHM.movie.videojs.player_ = this;
+        HMHM.movie.ytplayer = HMHM.movie.videojs.player;
+
+        setTimeout(function() {
+            $('.vjs-comment-card').addClass('vjs-card-show');
+        }, 1);
+    });
+})(window.videojs);
+</script>
+            
+<!-- User Insight PCDF Code Start : dotinstall.com -->
+<script type="text/javascript">
+<!--
+var _uic = _uic ||{}; var _uih = _uih ||{};_uih['id'] = 50397;
+_uih['lg_id'] = 'ee5fc9b6b780d0989dfb296cf6ff11ccad5e4491';
+_uih['fb_id'] = '';
+_uih['tw_id'] = '';
+_uih['uigr_1'] = ''; _uih['uigr_2'] = ''; _uih['uigr_3'] = ''; _uih['uigr_4'] = ''; _uih['uigr_5'] = '';
+_uih['uigr_6'] = ''; _uih['uigr_7'] = ''; _uih['uigr_8'] = ''; _uih['uigr_9'] = ''; _uih['uigr_10'] = '';
+/* DO NOT ALTER BELOW THIS LINE */
+/* WITH FIRST PARTY COOKIE */
+(function() {
+var bi = document.createElement('scri'+'pt');bi.type = 'text/javascript'; bi.async = true;
+bi.src = ('https:' == document.location.protocol ? 'https://bs' : 'http://c') + '.nakanohito.jp/b3/bi.js';
+var s = document.getElementsByTagName('scri'+'pt')[0];s.parentNode.insertBefore(bi, s);
+})();
+//-->
+</script>
+<!-- User Insight PCDF Code End : dotinstall.com -->
+
+<!-- USERGRAM Attributes -->
+<script type="text/javascript">
+window.ugattr = window.ugattr || {};
+ugattr['serviceId'] = '8b4ce5836299222139ce09a78a8175228be320ab';
+</script>
+<!-- USERGRAM Attributes end -->
+
+<!-- USERGRAM -->
+<script type="text/javascript">
+(function(){var a=window,b=document,c=a.usergram=a.usergram||[],d,e;
+c.l||(c.s=(new Date()).getTime(),c.l=!0,d=b.getElementsByTagName('script')[0],
+e=b.createElement('script'),e.type='text/javascript',e.async=true,
+e.src='//code.usergram.info/js/usergram.js',d.parentNode.insertBefore(e,d))})();
+
+window.usergram=window.usergram||[],window.ugattr=window.ugattr||{};
+usergram.push(['send','UgoHy1-1','pv',ugattr]);
+</script>
+<!-- USERGRAM end -->
+
+
+<script src="./favicon_files/jquery.circliful.min.js.ダウンロード"></script>
+<script src="./favicon_files/highlight.pack.js.ダウンロード"></script>
+
+
+
+
+<script>
+$(function() {
+    var playPauseCount = 0;
+    var VIEW_CENTER_CARD_THRES = 8;
+    var displaySidebarResizeGuide = true;
+    var COOKIE_PATH = '/lessons/';
+    var EDITOR_AVAILABLE = false;
+
+    function updateSidebarTop() {
+        Dotinstall.layout.updateSidebarTop(2);
+    }
+
+    /**
+     * ブラウザリサイズ時の調整
+     */
+    function onResizeWindow() {
+        Dotinstall.layout.onResizeVideoPage({
+            update_sidebar_top: { offset: 2 }
+        });
+
+        Dotinstall.responsive.topbar.setIsFullWidthPage(true);
+        Dotinstall.responsive.topbar.apply(true);
+    }
+
+    Dotinstall.sizes.main.CONTENTS_RATIO = Dotinstall.layout.getMainContentsRatio();
+
+    if (Dotinstall.layout.mustBeSingleCol()) {
+        $('#sidebar').css({
+            left: 0,
+            right: 'auto'
+        });
+    } else {
+        $('#sidebar').css({
+            left: $('#main').outerWidth(),
+            right: 'auto'
+        });
+    }
+
+    updateSidebarTop();
+
+    Dotinstall.editor.detectTabsScrollable();
+
+    $(window).on('resize', function() {
+        onResizeWindow();
+    }).on('scroll', function(e) {
+        if (EDITOR_AVAILABLE) {
+            $('#sidebar').offset({
+                left: Dotinstall.sizes.sidebar.OFFSET_LEFT
+            });
+        }
+    });
+
+    onResizeWindow();
+
+    $('#sidebar').addClass('ready');
+
+    if (Dotinstall.layout.isTheaterMode()) {
+        $('#overlay_sidebar').css({
+            top: $('#theater_wrapper').offset().top + 'px'
+        });
+    } else {
+        $('#overlay_sidebar').css({
+            top: $('#main').offset().top + 'px'
+        });
+    }
+
+    Dotinstall.resize.apply(
+        $('#resize_handle'),
+        $('#main'),
+        $('#sidebar'),
+        function() {
+            $('#resize_handle').addClass('on');
+        },
+        function() {
+            var playerSize;
+
+            Dotinstall.layout.updateSidebarSettings(COOKIE_PATH);
+
+            playerSize = Dotinstall.resize.player.exec();
+
+            Dotinstall.layout.adjustCenterCard(playerSize);
+
+            Dotinstall.layout.adjustBreadcrumb(playerSize.width);
+
+            if ($('#ui_guide').is(':visible')) {
+                displaySidebarResizeGuide = false;
+
+                $('#ui_guide').hide();
+
+                Dotinstall.uiGuide.cookie.sidebarResize();
+
+                                    Dotinstall.uiGuide.done('sidebar_resize');
+                            }
+
+            $('.source-editor').each(function(i) {
+                var editor;
+
+                if (typeof Dotinstall.sources[i] === 'undefined') {
+                    return;
+                }
+
+                editor = Dotinstall.sources[i];
+
+                if ($(this).is(':visible')) {
+                    $(this).height(editor.getSession().getScreenLength() * editor.renderer.lineHeight);
+                    editor.resize();
+                }
+            });
+
+            $('.source-editor-diff').each(function(i) {
+                var editor;
+
+                if (typeof Dotinstall.diffs[i] === 'undefined') {
+                    return;
+                }
+
+                editor = Dotinstall.diffs[i];
+
+                if ($(this).is(':visible')) {
+                    $(this).height(editor.getSession().getScreenLength() * editor.renderer.lineHeight);
+                    editor.resize();
+                }
+            });
+
+            Dotinstall.layout.adjustAllTerminals();
+
+            if (Dotinstall.editor.isEnabled()) {
+                Dotinstall.editor.resizeAll();
+            }
+
+            Dotinstall.sizes.main.CONTENTS_RATIO = Dotinstall.layout.getMainContentsRatio();
+
+            Dotinstall.sizes.sidebar.OFFSET_LEFT = $('#sidebar').offset().left
+
+            Dotinstall.editor.detectTabsScrollable();
+
+            Dotinstall.layout.adjustEditorModalForIE11();
+
+            Dotinstall.layout.adjustMaterialArea();
+        },
+        function() {
+            $('#resize_handle').removeClass('on');
+        }
+    );
+
+    if (Dotinstall.layout.isTheaterMode()) {
+        setTimeout(function() {
+            Dotinstall.resize.setHandlerOffset();
+        }, 1);
+    }
+
+    (function() {
+        var watcher = new Dotinstall.resize.watcher(document.getElementById('main_contents'));
+
+        watcher.watchHeightChange(function() {
+            Dotinstall.layout.adjustLessonContentsHeight();
+            Dotinstall.resize.setHandlerOffset();
+        });
+    })();
+
+    (function() {
+        var watcher = new Dotinstall.resize.watcher(document.getElementById('sidebar_contents'));
+
+        watcher.watchHeightChange(function() {
+            Dotinstall.layout.adjustLessonContentsHeight();
+            Dotinstall.resize.setHandlerOffset();
+        });
+    })();
+
+    if ($('#myStat').circliful) {
+        $('#myStat').circliful();
+    }
+
+  
+    
+
+    if ($('#user_id').val() !== '') {
+        HMHM.movie.isLogin = true;
+
+        // lesson history
+        $.ajax({
+            url: '/lesson/create_history',
+            type: 'POST',
+            data: {
+                user_id: $('#user_id').val(),
+                lesson_id: $('#lesson_id').val(),
+                one_time_token: $('input[name="one_time_token"]:first').val()
+            },
+            timeout: 15000
+        }).done(function(res) {
+            HMHM.movie.historyId = res.history_id;
+            HMHM.lesson.getPackageHistoryCount('basic_html_v5');
+        });
+
+        HMHM.lesson.getPackageProgress(
+            'basic_html_v5',
+            {
+                completed: function(lesson) {
+                    $('#lesson_row_' + lesson.id).find('a').addClass('done');
+                },
+                notCompleted: function(lesson) {
+                    $('#lesson_row_' + lesson.id).find('a').removeClass('done');
+                },
+                after: function(res) {
+                    $('#completed_lesson_count').text(res.completed_count);
+                    $('#complete_average').text(res.completed_rate);
+
+                    if ($('#myStat').length) {
+                        $('#myStat')
+                            .empty()
+                            .data('text', res.completed_rate + '%')
+                            .data('percent', res.completed_rate)
+                            .circliful();
+                    }
+
+                    $('#lesson_complete_message_bar').width(res.completed_rate + '%');
+                }
+            }
+        );
+
+        if (
+            $('#autoplay').is(':checked')
+            && $('#is_premium').val() === '1'
+            && $('video').length === 1
+        ) {
+            $.post('/lesson/prepare_next.json', {
+                user_id: $('#user_id').val(),
+                package_id: $('#package_id').val(),
+                sequence: $('#sequence').val(),
+                one_time_token: $('input[name="one_time_token"]:first').val()
+            });
+        }
+    }
+
+    $('.source-select').on('change', function() {
+        var selected = $(this).find('option:selected');
+
+        if (selected.index() === 0) {
+            $('.each_source_area').show();
+            $('#source_select_default').text('ソースコードを選択してください');
+        } else {
+            $('.each_source_area')
+                .hide()
+                .each(function() {
+                    if ($(this).data('source') === selected.data('source')) {
+                        $(this).show();
+                    }
+                });
+            $('#source_select_default').text('すべてのソースコードを表示する');
+        }
+    });
+
+    
+
+  
+        $('.vjs-center-card').addClass('vjs-card-hidden-strongly');
+
+        $('video').on('click', function() {
+            playPauseCount++;
+
+            if (playPauseCount >= VIEW_CENTER_CARD_THRES) {
+                $('.vjs-center-card').removeClass('vjs-card-hidden-strongly');
+            }
+        });
+
+        $('.vjs-play-control').on('click', function() {
+            playPauseCount++;
+
+            if (playPauseCount >= VIEW_CENTER_CARD_THRES) {
+                $('.vjs-center-card').removeClass('vjs-card-hidden-strongly');
+            }
+        });
+
+    $('#toggle_memo').click(function(e) {
+        e.preventDefault();
+
+        if ($('#memo_form').is(':visible')) {
+            HMHM.cookie.set('hide_memo', 1, 86400*90*1000, COOKIE_PATH);
+            $('#memo_form').slideUp();
+            $(this).addClass('sbox-close').removeClass('sbox-open');
+        } else {
+            HMHM.cookie.set('hide_memo', '', -86400*1000, COOKIE_PATH);
+            $('#memo_form').slideDown();
+            $(this).removeClass('sbox-close').addClass('sbox-open');
+        }
+    });
+
+    Dotinstall.overlaySidebar.enable();
+
+    });
+
+HMHM.repeat(100, HMHM.movie.monitorCurrentTime);
+</script>
+
+<script src="./favicon_files/caption.js.ダウンロード"></script>
+
+<script src="./favicon_files/ace.js.ダウンロード"></script>
+<script src="./favicon_files/ext-modelist.js.ダウンロード"></script>
+<script>
+$(function() {
+    'use strict';
+
+    if (typeof window.Dotinstall === 'undefined') {
+        window.Dotinstall = {};
+    }
+
+    Dotinstall.sources = [];
+    Dotinstall.diffs   = [];
+
+    function applyEditor($elem) {
+        var editor;
+
+        editor = ace.edit($elem.attr('id'));
+        editor.getSession().setUseSoftTabs(false);
+        editor.getSession().setUseWorker(false);
+        editor.getSession().setUseWrapMode(true);
+        editor.getSession().setOptions({
+            indentedSoftWrap: false
+        });
+
+        editor.setFontSize(13);
+        editor.container.style.lineHeight = 1.4;
+        editor.renderer.updateFontSize();
+
+        $elem.height(editor.getSession().getScreenLength() * editor.renderer.lineHeight);
+        editor.resize();
+
+        editor.setSelectionStyle('text');
+        editor.setReadOnly(true);
+        editor.setShowPrintMargin(false);
+        editor.setHighlightActiveLine(false);
+        editor.commands.removeCommand('find');
+        editor.commands.removeCommand('showSettingsMenu');
+
+        editor.setTheme('ace/theme/chrome');
+
+        (function() {
+            var modelist = ace.require('ace/ext/modelist');
+            var mode = modelist.getModeForPath($elem.data('filename')).mode;
+
+            if (
+                $elem.data('filename') !== '.diff'
+                && $elem.parents('.each_source_area').data('is-readme') === 1
+            ) {
+                mode = 'ace/mode/ruby';
+            }
+
+            editor.getSession().setMode(mode);
+        })();
+
+        return editor;
+    }
+
+    $('#tab_source').on('shown', function() {
+        $('.source-editor').each(function(i) {
+            if (typeof Dotinstall.sources[i] !== 'undefined') {
+                return;
+            }
+
+            Dotinstall.sources[i] = applyEditor($(this));
+
+            /*if ($(this).data('no-diff') === 1) {
+                $(this).hide();
+            }*/
+        });
+
+        $('.source-editor-diff').each(function(i) {
+            var editor;
+
+            if (typeof Dotinstall.diffs[i] !== 'undefined') {
+                return;
+            }
+
+            editor = applyEditor($(this));
+
+            editor.renderer.on('afterRender', function() {
+                $(editor.renderer.container)
+                    .find('.ace_constant').each(function() {
+                        $(this).parents('.ace_line_group').children('.ace_line').addClass('diff_added');
+                    })
+                .end()
+                    .find('.ace_function').each(function() {
+                        $(this).parents('.ace_line_group').children('.ace_line').addClass('diff_removed');
+                    });
+            });
+
+            Dotinstall.diffs[i] = editor;
+
+            $(this).hide();
+        });
+    });
+
+    $('#tab_material').on('shown', function() {
+        var materials = document.querySelectorAll('.material');
+        var i;
+        var imgs = [];
+
+        if (materials.length === 0) {
+            return;
+        }
+
+        for (i = 0; i < materials.length; i++) {
+            materials[i].style.backgroundImage = 'url(' + materials[i].dataset.src + ')';
+            imgs[i] = document.createElement('img');
+            imgs[i].dataset.i = i;
+            imgs[i].addEventListener('load', function() {
+                if (materials[this.dataset.i].getBoundingClientRect().width > this.width) {
+                    materials[this.dataset.i].classList.remove('large-image');
+                }
+            });
+            imgs[i].src = materials[i].dataset.src;
+        }
+
+        Dotinstall.layout.adjustMaterialArea();
+    });
+
+    });
+</script>
+
+<script>Dotinstall.player.monitor.run();</script>
+
+
+
+
+<div id="resize_mask" class="resize-mask"></div><style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body></html>
